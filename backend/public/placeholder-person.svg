@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 450" width="300" height="450">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1c1c30;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0d0d1a;stop-opacity:1" />
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="40%" r="40%">
+      <stop offset="0%" style="stop-color:#2a2a42;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1c1c30;stop-opacity:0" />
+    </radialGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="300" height="450" fill="url(#bgGrad)" rx="6"/>
+
+  <!-- Subtle glow behind silhouette -->
+  <ellipse cx="150" cy="185" rx="90" ry="90" fill="url(#glow)"/>
+
+  <!-- Head circle -->
+  <circle cx="150" cy="155" r="52" fill="#22223a"/>
+  <circle cx="150" cy="155" r="52" fill="none" stroke="#2e2e4e" stroke-width="1.5"/>
+
+  <!-- Shoulders / body arc -->
+  <path d="M 30 340 Q 30 260 150 260 Q 270 260 270 340 L 270 380 Q 270 395 255 395 L 45 395 Q 30 395 30 380 Z"
+        fill="#22223a" stroke="#2e2e4e" stroke-width="1.5"/>
+
+  <!-- Subtle neck -->
+  <rect x="133" y="200" width="34" height="30" rx="6" fill="#22223a"/>
+
+  <!-- Label -->
+  <text x="150" y="430" font-family="'Segoe UI', Arial, sans-serif" font-size="14" font-weight="600"
+        fill="#2e2e4a" text-anchor="middle" letter-spacing="1">NO PHOTO</text>
+</svg>
