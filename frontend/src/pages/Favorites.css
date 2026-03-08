@@ -1,0 +1,19 @@
+.empty-state {
+  text-align: center; padding: 6rem 2rem;
+  animation: slideUp 0.4s ease both;
+}
+.empty-icon { font-size: 4rem; margin-bottom: 1.2rem; display: block; opacity: 0.35; }
+.empty-state h2 { font-family: 'Outfit','Inter',sans-serif; font-size: 1.6rem; font-weight: 900; color: var(--text); margin: 0 0 0.7rem; letter-spacing: -0.025em; }
+.empty-state p  { color: var(--muted); margin: 0 0 2.5rem; font-size: 0.95rem; }
+
+.btn-explore {
+  background: var(--accent); color: #fff;
+  padding: 0.8rem 2.2rem; border-radius: 50px;
+  text-decoration: none; font-weight: 700; font-size: 0.93rem;
+  transition: all 0.22s; display: inline-block;
+  box-shadow: 0 4px 18px rgba(229,9,20,0.4);
+}
+.btn-explore:hover {
+  background: #ff1a24; transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(229,9,20,0.55);
+}

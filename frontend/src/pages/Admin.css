@@ -1,0 +1,289 @@
+.admin-page {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 4rem;
+  min-height: 100vh;
+}
+
+.admin-header {
+  margin-bottom: 2rem;
+}
+
+.admin-header h1 {
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+  font-weight: 800;
+  margin: 0 0 0.4rem;
+}
+
+.admin-header p { color: #888; margin: 0; }
+
+.admin-msg {
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+}
+
+.admin-msg.success { background: rgba(34,197,94,0.15); border: 1px solid rgba(34,197,94,0.3); color: #4ade80; }
+.admin-msg.error { background: rgba(229,9,20,0.15); border: 1px solid rgba(229,9,20,0.3); color: #ff6b6b; }
+
+.admin-tabs {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.admin-tab {
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.12);
+  color: #ccc;
+  padding: 0.5rem 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.admin-tab:hover { background: rgba(255,255,255,0.12); color: #fff; }
+.admin-tab.active { background: #e50914; border-color: #e50914; color: #fff; }
+
+.admin-section { }
+
+.admin-section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.admin-section-header h2 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.btn-add {
+  background: #e50914;
+  color: #fff;
+  border: none;
+  padding: 0.55rem 1.25rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+
+.btn-add:hover { background: #c5070f; }
+
+.admin-loading, .admin-empty {
+  text-align: center;
+  color: #888;
+  padding: 3rem;
+}
+
+.admin-table-wrapper {
+  overflow-x: auto;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.admin-table th {
+  background: rgba(255,255,255,0.05);
+  color: #888;
+  font-weight: 600;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.75rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.admin-table td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  color: #ccc;
+  vertical-align: middle;
+}
+
+.admin-table tr:last-child td { border-bottom: none; }
+.admin-table tr:hover td { background: rgba(255,255,255,0.03); }
+.banned-row td { opacity: 0.6; }
+
+.movie-title-cell {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.admin-poster {
+  width: 36px;
+  height: 54px;
+  object-fit: cover;
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+
+.badge {
+  background: rgba(255,255,255,0.1);
+  color: #ccc;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  text-transform: capitalize;
+}
+
+.admin-badge { background: rgba(229,9,20,0.2); color: #ff6b6b; }
+
+.status-dot {
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.status-dot.active { color: #4ade80; }
+.status-dot.banned { color: #ff6b6b; }
+
+.table-actions { display: flex; gap: 0.5rem; }
+
+.btn-edit, .btn-delete, .btn-ban, .btn-unban {
+  padding: 0.3rem 0.75rem;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.btn-edit { background: rgba(255,255,255,0.1); color: #fff; }
+.btn-edit:hover { background: rgba(255,255,255,0.2); }
+
+.btn-delete { background: rgba(229,9,20,0.2); color: #ff6b6b; }
+.btn-delete:hover { background: rgba(229,9,20,0.4); }
+
+.btn-ban { background: rgba(251,146,60,0.2); color: #fb923c; }
+.btn-ban:hover { background: rgba(251,146,60,0.4); }
+
+.btn-unban { background: rgba(74,222,128,0.2); color: #4ade80; }
+.btn-unban:hover { background: rgba(74,222,128,0.4); }
+
+/* Modal */
+.admin-form-modal {
+  background: #0f0f1a;
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 16px;
+  width: 100%;
+  max-width: 700px;
+  max-height: 90vh;
+  overflow-y: auto;
+  padding: 2rem;
+}
+
+.modal-form-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.modal-form-header h2 { font-size: 1.3rem; font-weight: 700; margin: 0; }
+
+.modal-close {
+  background: none;
+  border: none;
+  color: #888;
+  font-size: 1.1rem;
+  cursor: pointer;
+  padding: 0.25rem;
+  transition: color 0.2s;
+}
+
+.modal-close:hover { color: #fff; }
+
+.movie-form { }
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.form-group { display: flex; flex-direction: column; gap: 0.4rem; }
+.form-group.full-width { grid-column: 1 / -1; }
+
+.form-group label { font-size: 0.82rem; font-weight: 600; color: #aaa; }
+
+.form-group input, .form-group select, .form-group textarea {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 8px;
+  padding: 0.6rem 0.875rem;
+  color: #fff;
+  font-size: 0.9rem;
+  outline: none;
+  transition: border-color 0.2s;
+  font-family: inherit;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus { border-color: #e50914; }
+
+.form-group select option { background: #1a1a2e; }
+.form-group textarea { resize: vertical; min-height: 80px; }
+
+.form-actions { display: flex; justify-content: flex-end; gap: 0.75rem; }
+
+.btn-cancel {
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.12);
+  color: #ccc;
+  padding: 0.65rem 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.2s;
+}
+
+.btn-cancel:hover { background: rgba(255,255,255,0.12); }
+
+.btn-save {
+  background: #e50914;
+  border: none;
+  color: #fff;
+  padding: 0.65rem 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+
+.btn-save:hover:not(:disabled) { background: #c5070f; }
+.btn-save:disabled { opacity: 0.6; cursor: not-allowed; }
+
+.btn-clear-history {
+  background: rgba(229,9,20,0.15);
+  border: 1px solid rgba(229,9,20,0.3);
+  color: #ff6b6b;
+  padding: 0.5rem 1.25rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: all 0.2s;
+}
+
+.btn-clear-history:hover { background: rgba(229,9,20,0.3); }
+
+@media (max-width: 600px) {
+  .form-grid { grid-template-columns: 1fr; }
+}
